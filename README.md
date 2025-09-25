@@ -79,16 +79,45 @@ uvicorn src.main:app --reload
 ## 📁 Project Structure (example)
 
 ```
-fastapi-project/
-│── alembic/             # Alembic migration scripts
-│── src/                 # Application code
-│   ├── main.py          # FastAPI entry point
-│   ├── database.py      # SQLAlchemy DB setup
-│   ├── models.py        # SQLAlchemy models
-│   ├── routers/         # API routes
-│── alembic.ini          # Alembic config
-│── requirements.txt     # Python dependencies
-│── README.md            # Project setup guide
+fastapi-project
+├── alembic/                  # DB migrations
+├── src
+│   ├── auth
+│   │   ├── router.py
+│   │   ├── schemas.py
+│   │   ├── models.py
+│   │   ├── dependencies.py
+│   │   ├── config.py
+│   │   ├── constants.py
+│   │   ├── exceptions.py
+│   │   ├── service.py
+│   │   └── utils.py
+│   ├── posts
+│   │   ├── router.py
+│   │   ├── schemas.py
+│   │   ├── models.py
+│   │   ├── dependencies.py
+│   │   ├── constants.py
+│   │   ├── exceptions.py
+│   │   ├── service.py
+│   │   └── utils.py
+│   ├── config.py
+│   ├── models.py
+│   ├── exceptions.py
+│   ├── pagination.py
+│   ├── database.py
+│   └── main.py
+├── tests/
+│   ├── auth
+│   └── posts
+├── requirements/
+│   ├── base.txt
+│   ├── dev.txt
+│   └── prod.txt
+├── .env
+├── logging.ini
+└── alembic.ini
+
 ```
 
 ---
