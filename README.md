@@ -144,6 +144,20 @@ alembic history
 - [Uvicorn](https://www.uvicorn.org/)  
 
 ---
+## 3) Mapping for Java Developers (Quick Cheat-Sheet)
+
+| **Java (Spring)**           | **FastAPI (this project)**              |
+|------------------------------|-----------------------------------------|
+| `@Entity` / JPA entity       | `models.py` (SQLAlchemy models)         |
+| DTO / Request/Response objects | `schemas.py` (Pydantic models)       |
+| `@Repository` / DAO          | `repository.py` (SQLAlchemy queries)    |
+| `@Service`                   | `service.py` (business logic & orchestration) |
+| `@Controller` / `@RestController` | `router.py` (APIRouter endpoints) |
+| Spring Application           | `src/main.py` (`app = FastAPI()`)       |
+| Spring `@Bean` DI            | `Depends()` (FastAPI Dependency Injection) |
+| `application.properties`     | `src/config.py` + `.env` (Pydantic Settings) |
+| Flyway                       | Alembic (`migrations/` folder)          |
+
 
 ## ✨ Notes
 
